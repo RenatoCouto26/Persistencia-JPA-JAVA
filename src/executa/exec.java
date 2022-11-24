@@ -13,7 +13,7 @@ import entidades.UsuarioPK;
 public class exec {
 
 	public static void main(String[] args) {
-		
+		// arquivo sendo gerenciado pelo git
 		
 	//	Autores autor = new Autores();
 	//	autor.setNome("Clementino da silva Magalhaes");
