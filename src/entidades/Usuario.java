@@ -9,7 +9,12 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name="Usuario.findAll", query="SELECT u FROM Usuario u")
+@NamedQueries({
+@NamedQuery(name="Usuario.findall", query="SELECT u FROM Usuario u"),
+@NamedQuery(name="Usuario.findbynome", query="SELECT u FROM Usuario u where u.nome = :nome"),
+@NamedQuery(name="Usuario.findbycpf", query="SELECT u FROM Usuario u where u.id.cpf = :cpf"),
+})
+
 public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -26,6 +31,11 @@ public class Usuario implements Serializable {
 		this.nome=nome;
 	}
 
+	//teste de retorno do cpf 
+	public String getIdcpf() {
+		return this.id.getCpf();
+	}
+	
 	public UsuarioPK getId() {
 		return this.id;
 	}
@@ -40,6 +50,11 @@ public class Usuario implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nome=" + nome + "]";
 	}
 
 }

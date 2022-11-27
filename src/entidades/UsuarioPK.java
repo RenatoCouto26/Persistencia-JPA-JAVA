@@ -60,4 +60,9 @@ public class UsuarioPK implements Serializable {
 		
 		return hash;
 	}
+
+	@Override
+	public String toString() {
+		return "UsuarioPK [cpf=" + cpf + ", email=" + email + "]";
+	}
 }
