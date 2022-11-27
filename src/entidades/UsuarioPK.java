@@ -16,18 +16,16 @@ public class UsuarioPK implements Serializable {
 
 	private String email;
 
-	
-	//construtor da classe 
 	public UsuarioPK() {
 	}
 	
-	public UsuarioPK(String cpf, String email ) {
-		this.cpf=cpf;
-		this.email=email;
+	public UsuarioPK(String cpf, String email) {
+	this.cpf=cpf;
+	this.email=email;
+	
 	}
 	
 	
-	// metodos get e set 
 	public String getCpf() {
 		return this.cpf;
 	}
@@ -40,9 +38,7 @@ public class UsuarioPK implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	//---------------------------------------
-	
-	// Implementação de equals
+
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;

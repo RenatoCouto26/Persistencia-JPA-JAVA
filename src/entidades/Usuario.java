@@ -20,7 +20,7 @@ public class Usuario implements Serializable {
 
 	public Usuario() {
 	}
-	
+
 	public Usuario(UsuarioPK id, String nome) {
 		this.id=id;
 		this.nome=nome;
