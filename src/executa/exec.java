@@ -21,7 +21,7 @@ public class exec {
 	//UsuarioPK usuariopk = new UsuarioPK("89709887660", "luanacouto@gmail.com");
 	//Usuario usuario = new Usuario(usuariopk, "Luana Silva Couto Couto");
 		
-		Usuario usuario = new Usuario(new UsuarioPK("78041884110", "teste@gmail.com"), "teste da silva couto");
+		Usuario usuario = new Usuario(new UsuarioPK("78041884107", "teste2@gmail.com"), "Clementino da silva silva");
 				
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpaRelacionamentos");
 		EntityManager bd_livraria = emf.createEntityManager();
