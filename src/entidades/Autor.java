@@ -4,7 +4,6 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
 
-
 /**
  * The persistent class for the autor database table.
  * 
@@ -12,9 +11,14 @@ import java.util.List;
 
 //TODO implementar a consulta por nome
 @Entity
-@NamedQuery(name="Autor.findAll", query="SELECT a FROM Autor a")
-//@NamedQuery(name="Autor.findbyname", query="SELECT a FROM Autor a")
+@NamedQueries({
+//@NamedQuery(name="Autor.findAll", query="SELECT a FROM Autor a"),
+@NamedQuery(name="Autor.findbyid", query="SELECT a FROM Autor a where a.id = :id"),
+})
 public class Autor implements Serializable {
+	
+	
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -28,8 +32,11 @@ public class Autor implements Serializable {
 	private List<Livro> livros;
 
 	
-	
 	public Autor() {
+	}
+	
+	public Autor(String nome) {
+		this.nome = nome;
 	}
 
 	public int getId() {

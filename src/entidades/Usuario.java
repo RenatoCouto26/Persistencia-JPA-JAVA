@@ -10,8 +10,8 @@ import javax.persistence.*;
  */
 @Entity
 @NamedQueries({
-@NamedQuery(name="Usuario.findall", query="SELECT u FROM Usuario u"),
-@NamedQuery(name="Usuario.findbynome", query="SELECT u FROM Usuario u where u.nome = :nome"),
+//@NamedQuery(name="Usuario.findall", query="SELECT u FROM Usuario u"),
+@NamedQuery(name="Usuario.findbynome", query="SELECT u FROM Usuario u where u.nome LIKE :nome"),
 @NamedQuery(name="Usuario.findbycpf", query="SELECT u FROM Usuario u where u.id.cpf = :cpf"),
 })
 

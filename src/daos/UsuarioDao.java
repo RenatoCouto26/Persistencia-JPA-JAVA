@@ -20,9 +20,9 @@ public class UsuarioDao {
 						.getResultList();	
 			}
 
-			public Usuario usuarioPorNome( String nome) {
+			public List<Usuario> usuarioPorNome( String nome) {
 				return bd_livraria.createNamedQuery("Usuario.findbynome", Usuario.class)
-						.setParameter("nome" , nome).getSingleResult();
+						.setParameter("nome" , "%"+nome+"%").getResultList();
 			}
 			
 			public Usuario usuarioPorCpf( String cpf) {

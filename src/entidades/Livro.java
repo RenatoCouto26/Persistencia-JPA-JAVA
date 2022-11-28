@@ -5,7 +5,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-
 /**
  * The persistent class for the livro database table.
  * 
@@ -38,6 +37,10 @@ public class Livro implements Serializable {
 	public Livro() {
 	}
 
+	public Livro(String nome) {
+		this.nome = nome;
+	}
+	
 	public int getId() {
 		return this.id;
 	}
