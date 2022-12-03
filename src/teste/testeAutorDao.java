@@ -1,4 +1,4 @@
-package executa;
+package teste;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +16,10 @@ import entidades.Livro;
 import entidades.Usuario;
 import entidades.UsuarioPK;
 
-public class exec {
+public class testeAutorDao {
 
 	public static void main(String[] args) {
-	// arquivo sendo gerenciado pelo git
-		
-	
-			
+	// arquivo sendo gerenciado pelo git	
 	//UsuarioPK usuariopk = new UsuarioPK("89709887660", "luanacouto@gmail.com");
 	//Usuario usuario = new Usuario(usuariopk, "Luana Silva Couto Couto");
 	//Usuario usuario = new Usuario(new UsuarioPK("78041884105", "teste3@gmail.com"), "Teste de inserção");
@@ -30,13 +27,11 @@ public class exec {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpaRelacionamentos");
 		EntityManager bd_livraria = emf.createEntityManager();
 		bd_livraria.getTransaction().begin();
-			
-			AutorDao autordao = new AutorDao(bd_livraria);
-			Autor autor = autordao.autorPorId(1);
-			
-				System.out.println(autor.getNome());
 		
-			
+			AutorDao autordao = new AutorDao(bd_livraria);
+			Autor autor = autordao.autorPorId(13375);
+			System.out.println(autor.getNome());
+				
 		bd_livraria.getTransaction().commit();
 
 	}

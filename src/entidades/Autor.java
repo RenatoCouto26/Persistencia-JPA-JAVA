@@ -3,22 +3,18 @@ package entidades;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
+// TODO -IMPLEMENTAR A LISTA DE LIVROS POR AUTOR
 
 /**
  * The persistent class for the autor database table.
  * 
  */
-
-//TODO implementar a consulta por nome
 @Entity
 @NamedQueries({
-//@NamedQuery(name="Autor.findAll", query="SELECT a FROM Autor a"),
-@NamedQuery(name="Autor.findbyid", query="SELECT a FROM Autor a where a.id = :id"),
+@NamedQuery(name="Autor.findbyid", query="SELECT a FROM Autor a where a.id = :id"),	
+//@NamedQuery(name="Autor.findAll", query="SELECT a FROM Autor a")
 })
 public class Autor implements Serializable {
-	
-	
-
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -31,14 +27,13 @@ public class Autor implements Serializable {
 	@OneToMany(mappedBy="autor")
 	private List<Livro> livros;
 
-	
 	public Autor() {
 	}
-	
-	public Autor(String nome) {
-		this.nome = nome;
-	}
 
+	public Autor(String nome) {
+		this.nome=nome;
+	}
+	
 	public int getId() {
 		return this.id;
 	}

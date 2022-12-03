@@ -12,7 +12,6 @@ public class AutorDao {
 		this.bd_livraria = bd_livraria;
 	}
 	
-	
 	public Autor autorPorId( Integer id) {
 		return bd_livraria.createNamedQuery("Autor.findbyid", Autor.class)
 				.setParameter("id" , id).getSingleResult();
