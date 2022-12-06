@@ -11,7 +11,10 @@ import java.util.Date;
  * 
  */
 @Entity
-@NamedQuery(name="Livro.findAll", query="SELECT l FROM Livro l")
+@NamedQueries({
+@NamedQuery(name="Livro.findAll", query="SELECT l FROM Livro l"),
+@NamedQuery(name="Livro.findById", query="SELECT l FROM Livro l where l.id = :id")
+})
 public class Livro implements Serializable {
 	private static final long serialVersionUID = 1L;
 

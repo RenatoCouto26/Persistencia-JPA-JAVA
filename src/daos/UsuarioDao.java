@@ -8,12 +8,11 @@ import entidades.Usuario;
 
 public class UsuarioDao {
 	
+	EntityManager bd_livraria;
+	
 	public UsuarioDao(EntityManager bd_livraria) {
 		this.bd_livraria = bd_livraria;
 	}
-
-	EntityManager bd_livraria;
-	
 	
 			public List<Usuario> listaUsuarios(){
 				return bd_livraria.createNamedQuery("Usuario.findall", Usuario.class)
