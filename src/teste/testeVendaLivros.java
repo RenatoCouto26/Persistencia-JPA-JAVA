@@ -24,25 +24,15 @@ public class testeVendaLivros {
 			LivroDao livrodao = new LivroDao(bd_livraria);
 			List<Livro> lista = new ArrayList<Livro>();
 						 
-			Livro l =  new Livro();
-			Livro l2 = new Livro();
-			Livro l3 = new Livro();
+						
+			lista.add(livrodao.SelecionaLivroPorId(4));
+			lista.add(livrodao.SelecionaLivroPorId(5));
+			lista.add(livrodao.SelecionaLivroPorId(6));
 			
-			l= livrodao.SelecionaLivroPorId(3);
-			l2= livrodao.SelecionaLivroPorId(7);
-			l3= livrodao.SelecionaLivroPorId(8);
-			
-			lista.add(l);
-			lista.add(l2);
-			lista.add(l3);
-			
-			for (Livro livro : lista) {
-				System.out.println(livro.getNome());
-			}
-			
+						
 			Venda venda = new Venda();
-			venda.setNota(1);
-			venda.setTotalDaVenda(150);
+			venda.setNota(2);
+			venda.setTotalDaVenda(200);
 			venda.setLivroLista(lista);
 			
 			//System.out.println(venda.toString());
