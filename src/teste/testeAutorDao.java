@@ -19,10 +19,7 @@ import entidades.UsuarioPK;
 public class testeAutorDao {
 
 	public static void main(String[] args) {
-	// arquivo sendo gerenciado pelo git	
-	//UsuarioPK usuariopk = new UsuarioPK("89709887660", "luanacouto@gmail.com");
-	//Usuario usuario = new Usuario(usuariopk, "Luana Silva Couto Couto");
-	//Usuario usuario = new Usuario(new UsuarioPK("78041884105", "teste3@gmail.com"), "Teste de inserção");
+	
 					
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpaRelacionamentos");
 		EntityManager bd_livraria = emf.createEntityManager();

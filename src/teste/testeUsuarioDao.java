@@ -13,7 +13,7 @@ public class testeUsuarioDao {
 		EntityManager bd_livraria = emf.createEntityManager();
 		bd_livraria.getTransaction().begin();
 				UsuarioDao usuariodao = new UsuarioDao(bd_livraria);
-				Usuario usuario = usuariodao.usuarioPorCpf("79041884220");
+				Usuario usuario = usuariodao.usuarioPorCpf("78641884210");
 				System.out.println(usuario.getNome());
 		bd_livraria.getTransaction().commit();
 

@@ -28,8 +28,7 @@ public class testeVendaLivros {
 			lista.add(livrodao.SelecionaLivroPorId(4));
 			lista.add(livrodao.SelecionaLivroPorId(5));
 			lista.add(livrodao.SelecionaLivroPorId(6));
-			
-						
+									
 			Venda venda = new Venda();
 			venda.setNota(2);
 			venda.setTotalDaVenda(200);
@@ -37,8 +36,7 @@ public class testeVendaLivros {
 			
 			//System.out.println(venda.toString());
 			bd_livraria.persist(venda);
-			
-			
+						
 		bd_livraria.getTransaction().commit();
 
 	}
